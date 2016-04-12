@@ -1,0 +1,636 @@
+; Sun Apr 12 12:58:34 CEST 2015
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([pr10_Class0] of  TransporteVIP
+
+	(clase_transporte primera)
+	(destino_transporte [pr9_Class7])
+	(duracion_translado 6.0)
+	(hora_salida 2000)
+	(id_transporte "1234RG")
+	(nombre_transporte "LujoAutobús-Mad-Bar1234RG")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 180.0))
+
+([pr10_Class1] of  TransporteVIP
+
+	(clase_transporte primera)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 6.0)
+	(hora_salida 1300)
+	(id_transporte "1235RG")
+	(nombre_transporte "LujoAutobús-Bar-Mad1235RG")
+	(origen_transporte [pr9_Class7])
+	(precio_transporte_persona 210.0))
+
+([pr10_Class10021] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class7])
+	(duracion_translado 6.0)
+	(hora_salida 2000)
+	(id_transporte "5792CBR")
+	(nombre_transporte "Autobús-Turista-Mad-Bar5792CBR")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 31.0))
+
+([pr10_Class18] of  Usuario
+
+	(edad 21)
+	(nacionalidad [pr9_Class65])
+	(nombre_usuario "Ana")
+	(num_pasajeros 5)
+	(sexo mujer))
+
+([pr10_Class2] of  %3AJESS-RULE
+
+	(%3ADEFINITION "(defrule MAIN::RtipoClienteJoven \n   (and (object (is-a Usuario) (nombre ?n) (edad ?edad)) \n        (test (< ?edad 30))) \n   => \n   (assert (MAIN::tipoCliente ?n joven)))")
+	(%3ADEFINITION-NAME "MAIN::RtipoClienteJoven")
+	(%3AKB-SAVE TRUE))
+
+([pr10_Class20] of  Usuario
+
+	(edad 22)
+	(nacionalidad [pr9_Class67])
+	(nombre_usuario "Victor")
+	(num_pasajeros 3)
+	(sexo hombre))
+
+([pr10_Class20022] of  Region
+
+	(idioma_region "Chino")
+	(nombre_region "Taiwán")
+	(pais_region [pr9_Class67]))
+
+([pr10_Class20023] of  Destino
+
+	(clima calido)
+	(nombre_destino "Taipéi")
+	(region_destino [pr10_Class20022])
+	(tipo_destino compras relax cultura aventura))
+
+([pr10_Class20024] of  Alojamiento
+
+	(id_alojamiento 12)
+	(localizacion_alojamiento [pr10_Class20023])
+	(nombre_alojamiento "NH Experiencia Asiática")
+	(precio_alojamiento_dia_persona 50.0)
+	(propiedad_de [pr9_Class20])
+	(regimen_alojamiento media_pension pension_completa todo_incluido desayuno)
+	(tipo_alojamiento hotel))
+
+([pr10_Class20033] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class8])
+	(duracion_translado 3.0)
+	(hora_salida 1000)
+	(id_transporte "2387")
+	(nombre_transporte "Avión-Turista-Mad-Wob2387")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 500.0))
+
+([pr10_Class20034] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 3.0)
+	(hora_salida 1000)
+	(id_transporte "2386")
+	(nombre_transporte "Avión-Turista-Wob-Mad2386")
+	(origen_transporte [pr9_Class8])
+	(precio_transporte_persona 550.0))
+
+([pr10_Class21] of  Usuario
+
+	(edad 35)
+	(nacionalidad [pr9_Class65])
+	(nombre_usuario "Carmen")
+	(num_pasajeros 2)
+	(sexo mujer))
+
+([pr10_Class3] of  %3AJESS-RULE
+
+	(%3ADEFINITION "(defrule MAIN::RtipoClienteMayor \n   (and (object (is-a Usuario) (nombre ?n) (edad ?edad)) \n        (test (>= ?edad 30))) \n   => \n   (assert (MAIN::tipoCliente ?n mayor)))")
+	(%3ADEFINITION-NAME "MAIN::RtipoClienteMayor")
+	(%3AKB-SAVE TRUE))
+
+([pr10_Class30035] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class7])
+	(duracion_translado 6.0)
+	(hora_salida 1800)
+	(id_transporte "5791CBR")
+	(nombre_transporte "Autobús-Turista-Mad-Bar5791CBR")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 40.0))
+
+([pr10_Class30036] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 6.0)
+	(hora_salida 2000)
+	(id_transporte "5732CBR")
+	(nombre_transporte "Autobús-Turista-Bar-Mad5732CBR")
+	(origen_transporte [pr9_Class7])
+	(precio_transporte_persona 31.0))
+
+([pr10_Class30092] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 7.0)
+	(hora_salida 1000)
+	(id_transporte "1999AR")
+	(nombre_transporte "Avión-Turista-Tai-Mad1999AR")
+	(origen_transporte [pr10_Class20023])
+	(precio_transporte_persona 250.0))
+
+([pr10_Class30093] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr10_Class20023])
+	(duracion_translado 7.0)
+	(hora_salida 1000)
+	(id_transporte "1998AR")
+	(nombre_transporte "Avión-Turista-Mad-Tai1998AR")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 260.0))
+
+([pr10_Class31] of  ViajeDeseado
+
+	(clima calido)
+	(duracion 2)
+	(origen [pr9_Class6])
+	(prefiere culinario urbano)
+	(presupuesto "25000")
+	(regimen_comida_deseado desayuno)
+	(usuario [pr10_Class18]))
+
+([pr10_Class33] of  ViajeDeseado
+
+	(clima calido)
+	(duracion 3)
+	(origen [pr9_Class6])
+	(prefiere deportivo descanso)
+	(presupuesto "2000")
+	(regimen_comida_deseado pension_completa)
+	(usuario [pr10_Class20]))
+
+([pr10_Class34] of  ViajeDeseado
+
+	(clima frio)
+	(duracion 1)
+	(origen [pr9_Class6])
+	(prefiere culinario descanso)
+	(presupuesto "20000")
+	(regimen_comida_deseado media_pension)
+	(usuario [pr10_Class21]))
+
+([pr10_Class40159] of  Alojamiento
+
+	(id_alojamiento 13)
+	(localizacion_alojamiento [pr9_Class30017])
+	(nombre_alojamiento "Parador El Escorial")
+	(precio_alojamiento_dia_persona 250.0)
+	(propiedad_de [pr10_Class40160])
+	(regimen_alojamiento media_pension pension_completa todo_incluido desayuno)
+	(tipo_alojamiento parador))
+
+([pr10_Class40160] of  Cadena
+
+	(nombre_empresa "Paradores Nacionales")
+	(numero_empleados 67)
+	(tiene [pr10_Class40159]))
+
+([pr10_Class40161] of  TransporteVIP
+
+	(clase_transporte bussiness)
+	(destino_transporte [pr9_Class30017])
+	(duracion_translado 1.0)
+	(hora_salida 2000)
+	(id_transporte "1893G")
+	(nombre_transporte "Coche Caballos-Mad-Escorial1893G")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 1000.0))
+
+([pr10_Class40162] of  TransporteVIP
+
+	(clase_transporte bussiness)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 1.0)
+	(hora_salida 1300)
+	(id_transporte "1894G")
+	(nombre_transporte "Coche Caballos-Mad-Escorial1894G")
+	(origen_transporte [pr9_Class30017])
+	(precio_transporte_persona 1000.0))
+
+([pr9_Class0] of  Pais
+
+	(nombre_pais "Estados Unidos")
+	(num_habitantes 318900000))
+
+([pr9_Class1] of  Region
+
+	(idioma_region
+		"Español"
+		"Catalán")
+	(nombre_region "Cataluña")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class10002] of  Cadena
+
+	(nombre_empresa "Meliá")
+	(numero_empleados 211)
+	(tiene
+		[pr9_Class10006]
+		[pr9_Class10019]
+		[pr9_Class10011]
+		[pr9_Class30023]
+		[pr9_Class16]
+		[pr9_Class17]))
+
+([pr9_Class10003] of  Alojamiento
+
+	(id_alojamiento 7)
+	(localizacion_alojamiento [pr9_Class7])
+	(nombre_alojamiento "NHBarcelona")
+	(precio_alojamiento_dia_persona 23.0)
+	(propiedad_de [pr9_Class20])
+	(regimen_alojamiento desayuno media_pension todo_incluido pension_completa)
+	(tipo_alojamiento hotel))
+
+([pr9_Class10006] of  Alojamiento
+
+	(id_alojamiento 8)
+	(localizacion_alojamiento [pr9_Class7])
+	(nombre_alojamiento "Romantic Hotel Barcelona")
+	(precio_alojamiento_dia_persona 100.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento pension_completa todo_incluido media_pension)
+	(tipo_alojamiento hotel))
+
+([pr9_Class10008] of  Region
+
+	(idioma_region "Español")
+	(nombre_region "Andalucía")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class10009] of  Destino
+
+	(clima calido)
+	(nombre_destino "Sevilla")
+	(region_destino [pr9_Class10008])
+	(tipo_destino cultura experienciaGastronomica relax altaCocina))
+
+([pr9_Class10010] of  Destino
+
+	(clima calido)
+	(nombre_destino "Málaga")
+	(region_destino [pr9_Class10008])
+	(tipo_destino playa relax deporte))
+
+([pr9_Class10011] of  Alojamiento
+
+	(id_alojamiento 6)
+	(localizacion_alojamiento [pr9_Class10009])
+	(nombre_alojamiento "Melia Sevilla")
+	(precio_alojamiento_dia_persona 22.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento desayuno media_pension pension_completa todo_incluido)
+	(tipo_alojamiento hotel))
+
+([pr9_Class10012] of  Alojamiento
+
+	(id_alojamiento 2)
+	(localizacion_alojamiento [pr9_Class10010])
+	(nombre_alojamiento "NH Gran Hotel de Málaga")
+	(precio_alojamiento_dia_persona 78.0)
+	(propiedad_de [pr9_Class20])
+	(regimen_alojamiento media_pension todo_incluido)
+	(tipo_alojamiento hotel))
+
+([pr9_Class10018] of  Destino
+
+	(clima frio)
+	(nombre_destino "Los Ángeles")
+	(region_destino [pr9_Class4])
+	(tipo_destino compras experienciaGastronomica altaCocina playa))
+
+([pr9_Class10019] of  Alojamiento
+
+	(id_alojamiento 3)
+	(localizacion_alojamiento [pr9_Class10018])
+	(nombre_alojamiento "Los Angeles Resort")
+	(precio_alojamiento_dia_persona 21.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento desayuno media_pension todo_incluido pension_completa)
+	(tipo_alojamiento hotel))
+
+([pr9_Class10025] of  Destino
+
+	(clima calido)
+	(nombre_destino "Mallorca")
+	(region_destino [pr9_Class10026])
+	(tipo_destino playa relax deporte aventura))
+
+([pr9_Class10026] of  Region
+
+	(idioma_region "Español")
+	(nombre_region "Baleares")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class13] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class10018])
+	(duracion_translado 9.0)
+	(hora_salida 600)
+	(id_transporte "13458H")
+	(nombre_transporte "Avión-Turista-Mad-Ang1378H")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 220.0))
+
+([pr9_Class15] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class10009])
+	(duracion_translado 3.0)
+	(hora_salida 1000)
+	(id_transporte "1309")
+	(nombre_transporte "Ave-Turista-Mad-Sev1309")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 100.0))
+
+([pr9_Class16] of  Alojamiento
+
+	(id_alojamiento 9)
+	(nombre_alojamiento "ss oceanic")
+	(precio_alojamiento_dia_persona 44.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento todo_incluido)
+	(tipo_alojamiento barco))
+
+([pr9_Class17] of  Alojamiento
+
+	(id_alojamiento 11)
+	(nombre_alojamiento "yate")
+	(precio_alojamiento_dia_persona 400.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento media_pension)
+	(tipo_alojamiento barco))
+
+([pr9_Class18] of  Alojamiento
+
+	(id_alojamiento 1)
+	(localizacion_alojamiento [pr9_Class30013])
+	(nombre_alojamiento "Albergue de la Abuela Maria")
+	(precio_alojamiento_dia_persona 10.0)
+	(regimen_alojamiento media_pension todo_incluido pension_completa)
+	(tipo_alojamiento albergue))
+
+([pr9_Class2] of  Region
+
+	(idioma_region "Español")
+	(nombre_region "Comunidad de Madrid")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class20] of  Cadena
+
+	(nombre_empresa "NH")
+	(numero_empleados 1011)
+	(tiene
+		[pr9_Class10003]
+		[pr9_Class10012]
+		[pr9_Class20000]
+		[pr9_Class30029]
+		[pr10_Class20024]))
+
+([pr9_Class20000] of  Alojamiento
+
+	(id_alojamiento 4)
+	(localizacion_alojamiento [pr9_Class10018])
+	(nombre_alojamiento "NH Los Angeles Resort Lujo")
+	(precio_alojamiento_dia_persona 500.0)
+	(propiedad_de [pr9_Class20])
+	(regimen_alojamiento todo_incluido)
+	(tipo_alojamiento hotel))
+
+([pr9_Class30013] of  Destino
+
+	(clima frio)
+	(nombre_destino "La Granja De San Ildefonso")
+	(region_destino [pr9_Class69])
+	(tipo_destino altaCocina relax cultura))
+
+([pr9_Class30017] of  Destino
+
+	(clima frio)
+	(nombre_destino "El Escorial")
+	(region_destino [pr9_Class2])
+	(tipo_destino cultura relax experienciaGastronomica))
+
+([pr9_Class30018] of  Region
+
+	(idioma_region "Español")
+	(nombre_region "Canarias")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class30019] of  Destino
+
+	(clima calido)
+	(nombre_destino "Tenerife")
+	(region_destino [pr9_Class30018])
+	(tipo_destino playa relax cultura aventura))
+
+([pr9_Class30020] of  Destino
+
+	(clima calido)
+	(nombre_destino "La Gomera")
+	(region_destino [pr9_Class30018])
+	(tipo_destino playa relax aventura deporte))
+
+([pr9_Class30023] of  Alojamiento
+
+	(id_alojamiento 5)
+	(localizacion_alojamiento [pr9_Class10009])
+	(nombre_alojamiento "Luxury Sevilla")
+	(precio_alojamiento_dia_persona 467.0)
+	(propiedad_de [pr9_Class10002])
+	(regimen_alojamiento todo_incluido desayuno media_pension todo_incluido)
+	(tipo_alojamiento hotel))
+
+([pr9_Class30029] of  Alojamiento
+
+	(id_alojamiento 10)
+	(localizacion_alojamiento [pr9_Class30019])
+	(nombre_alojamiento "NH Tenerife Hotel")
+	(precio_alojamiento_dia_persona 20.0)
+	(propiedad_de [pr9_Class20])
+	(regimen_alojamiento desayuno todo_incluido pension_completa)
+	(tipo_alojamiento hotel))
+
+([pr9_Class4] of  Region
+
+	(idioma_region "Inglés")
+	(nombre_region "California")
+	(pais_region [pr9_Class0]))
+
+([pr9_Class40012] of  TransporteVIP
+
+	(clase_transporte bussiness)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 9.0)
+	(hora_salida 500)
+	(id_transporte "1379H")
+	(nombre_transporte "Avión-Bussiness-Ang-Madrid1379H")
+	(origen_transporte [pr9_Class10018])
+	(precio_transporte_persona 1020.0))
+
+([pr9_Class40013] of  TransporteVIP
+
+	(clase_transporte bussiness)
+	(destino_transporte [pr9_Class10018])
+	(duracion_translado 9.0)
+	(hora_salida 600)
+	(id_transporte "1378H")
+	(nombre_transporte "Avión-Bussiness-Mad-Ang1378H")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 1000.0))
+
+([pr9_Class40014] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 9.0)
+	(hora_salida 500)
+	(id_transporte "1379H")
+	(nombre_transporte "Avión-Turista-Ang-Mad1379H")
+	(origen_transporte [pr9_Class10018])
+	(precio_transporte_persona 200.0))
+
+([pr9_Class40016] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 3.0)
+	(hora_salida 2030)
+	(id_transporte "1310")
+	(nombre_transporte "Ave-Turista-Sev-Mad1310")
+	(origen_transporte [pr9_Class10009])
+	(precio_transporte_persona 100.0))
+
+([pr9_Class40017] of  TransporteVIP
+
+	(clase_transporte primera)
+	(destino_transporte [pr9_Class10009])
+	(duracion_translado 3.0)
+	(hora_salida 1000)
+	(id_transporte "1309")
+	(nombre_transporte "Ave-Primera-Mad-Sev1309")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 180.0))
+
+([pr9_Class40018] of  TransporteVIP
+
+	(clase_transporte primera)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 3.0)
+	(hora_salida 2030)
+	(id_transporte "1310")
+	(nombre_transporte "Ave-Primera-Sev-Mad1310")
+	(origen_transporte [pr9_Class10009])
+	(precio_transporte_persona 195.0))
+
+([pr9_Class40021] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 5.0)
+	(hora_salida 1600)
+	(id_transporte "2191J")
+	(nombre_transporte "Avión-Turista-Ten-Mad2191J")
+	(origen_transporte [pr9_Class30019])
+	(precio_transporte_persona 75.0))
+
+([pr9_Class40022] of  TransporteTurista
+
+	(clase_transporte turista)
+	(destino_transporte [pr9_Class30019])
+	(duracion_translado 5.0)
+	(hora_salida 1000)
+	(id_transporte "2190J")
+	(nombre_transporte "Avión-Turista-Mad-Ten2190J")
+	(origen_transporte [pr9_Class6])
+	(precio_transporte_persona 75.0))
+
+([pr9_Class40031] of  TransporteVIP
+
+	(clase_transporte primera)
+	(destino_transporte [pr9_Class6])
+	(duracion_translado 9.0)
+	(hora_salida 200)
+	(id_transporte "1369H")
+	(nombre_transporte "Avión-Primera-Ang-Madrid1369H")
+	(origen_transporte [pr9_Class10018])
+	(precio_transporte_persona 1320.0))
+
+([pr9_Class5] of  Region
+
+	(idioma_region "Inglés")
+	(nombre_region "Massachusetts")
+	(pais_region [pr9_Class0]))
+
+([pr9_Class6] of  Destino
+
+	(clima calido)
+	(nombre_destino "Madrid")
+	(region_destino [pr9_Class2])
+	(tipo_destino cultura compras experienciaGastronomica altaCocina))
+
+([pr9_Class65] of  Pais
+
+	(nombre_pais "España")
+	(num_habitantes 47270000))
+
+([pr9_Class66] of  Pais
+
+	(nombre_pais "Portugal")
+	(num_habitantes 10460000))
+
+([pr9_Class67] of  Pais
+
+	(nombre_pais "China")
+	(num_habitantes 1357000000))
+
+([pr9_Class68] of  Pais
+
+	(nombre_pais "México")
+	(num_habitantes 122300000))
+
+([pr9_Class69] of  Region
+
+	(idioma_region "Español")
+	(nombre_region "Castilla León")
+	(pais_region [pr9_Class65]))
+
+([pr9_Class7] of  Destino
+
+	(clima calido)
+	(nombre_destino "Barcelona")
+	(region_destino [pr9_Class1])
+	(tipo_destino compras playa cultura altaCocina experienciaGastronomica))
+
+([pr9_Class8] of  Destino
+
+	(clima frio)
+	(nombre_destino "Woburn")
+	(region_destino [pr9_Class5])
+	(tipo_destino compras experienciaGastronomica))
