@@ -1,0 +1,788 @@
+; Sun Apr 12 12:58:34 CEST 2015
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot origen
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_pais
+;+		(comment "El nombre del país")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precio_alojamiento_dia_persona
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot tiene
+;+		(comment "Alojamientos de la cadena o empresa.")
+		(type INSTANCE)
+;+		(allowed-classes Alojamiento)
+;+		(inverse-slot propiedad_de)
+		(create-accessor read-write))
+	(single-slot localizacion_alojamiento
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot num_habitantes_destino
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot prefiere
+		(type SYMBOL)
+		(allowed-values urbano descanso culinario deportivo)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot regimen_alojamiento
+;+		(comment "El regimen de comidas.")
+		(type SYMBOL)
+		(allowed-values desayuno media_pension pension_completa todo_incluido)
+		(default media_pension pension_completa todo_incluido desayuno)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot recomendado_a
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot region_destino
+;+		(comment "Región a la que pertenece")
+		(type INSTANCE)
+;+		(allowed-classes Region)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot propiedad_de
+		(type INSTANCE)
+;+		(allowed-classes Cadena)
+;+		(cardinality 0 1)
+;+		(inverse-slot tiene)
+		(create-accessor read-write))
+	(single-slot clima
+		(type SYMBOL)
+		(allowed-values calido frio)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sexo
+		(type SYMBOL)
+		(allowed-values hombre mujer)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot suites
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot destino_transporte
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot presupuesto
+		(type STRING)
+		(default "1000000")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot tipo_destino
+		(type SYMBOL)
+		(allowed-values playa relax cultura compras deporte aventura experienciaGastronomica altaCocina)
+		(default compras)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-FILE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot habitaciones
+;+		(comment "habitaciones")
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot viajes_recomendados
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+		(create-accessor read-write))
+	(single-slot hora_salida
+		(type INTEGER)
+		(range 0 2359)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duracion_viaje
+;+		(comment "La duración del viaje en días. No se podrán contratar viajes con una duración superior a 30 días")
+		(type INTEGER)
+		(range 1 30)
+		(default 2)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot id_transporte
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_usuario
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pais_region
+;+		(comment "País al que pertenece la región.")
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot viajes_ofertados
+;+		(comment "Viajes ofertados por ese mayorista")
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+;+		(inverse-slot mayorista_viaje)
+		(create-accessor read-write))
+	(single-slot numero_empleados
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot regimen_comida_deseado
+		(type SYMBOL)
+		(allowed-values media_pension desayuno pension_completa todo_incluido)
+		(default desayuno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot origen_viaje
+;+		(comment "Ciudad de origen.")
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precio_transporte_persona
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 100.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_destino
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot camarote
+;+		(comment "Número de camarotes")
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duracion_translado
+;+		(comment "En horas")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot precio
+;+		(comment "El precio total de ese viaje")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 500.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot origen_transporte
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot duracion
+;+		(comment "En días")
+		(type INTEGER)
+		(range 1 %3FVARIABLE)
+		(default 3)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot id_alojamiento
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot clase_transporte
+		(type SYMBOL)
+		(allowed-values turista bussiness primera)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot destino_viaje
+;+		(comment "Ciudad de destino.")
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 1 1)
+;+		(inverse-slot viajes)
+		(create-accessor read-write))
+	(single-slot usuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot num_pasajeros
+		(type INTEGER)
+		(range 1 8)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot num_habitantes
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot medio_transporte_viaje_vuelta
+		(type INSTANCE)
+;+		(allowed-classes Transporte)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pasajeros
+;+		(comment "Número máximo de pasajeros")
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot num_viajeros
+;+		(comment "El número de viajeros que forma el grupo")
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precio_final_viaje
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot medio_transporte_viaje_ida
+;+		(comment "Medio de transporte.")
+		(type INSTANCE)
+;+		(allowed-classes Transporte)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot alojamiento_viaje
+		(type INSTANCE)
+;+		(allowed-classes Alojamiento)
+;+		(cardinality 0 1)
+;+		(inverse-slot viaje_en_que_se_oferta)
+		(create-accessor read-write))
+	(single-slot nombre_alojamiento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot viaje_en_que_se_oferta
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+;+		(inverse-slot alojamiento_viaje)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre_region
+;+		(comment "El nombre de la región, comunidad autónoma o equivalente división de un estado")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot viajes
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+;+		(inverse-slot destino_viaje)
+		(create-accessor read-write))
+	(single-slot nombre_empresa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot mayorista_viaje
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 1 1)
+;+		(inverse-slot viajes_ofertados)
+		(create-accessor read-write))
+	(single-slot nombre_viaje
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_transporte
+;+		(comment "El nombre del transporte.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot tipo_alojamiento
+		(type SYMBOL)
+		(allowed-values hotel albergue barco pensi%C3%B3n parador)
+		(default hotel)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot idioma_region
+;+		(comment "El idioma oficial hablado en la región (por ejemplo, en Cataluña catalán y español)")
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot nacionalidad
+;+		(comment "País de origen")
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot edad
+		(type INTEGER)
+		(range 18 %3FVARIABLE)
+		(default 25)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot estrellas
+;+		(comment "Número de estrellas del hotel.")
+		(type INTEGER)
+		(range 1 6)
+		(default 3)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-ENGINE
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot %3ASTARTUP-FILE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFINITION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFGLOBAL
+	(is-a %3AJESS-DEFINITION)
+	(role concrete))
+
+(defclass %3AJESS-DEFTEMPLATE
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFFACTS
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMESSAGE-HANDLER
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMETHOD
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3ARULE
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-RULE
+	(is-a %3AJESS-DEFINITION %3ARULE)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AFUNCTION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-FUNCTION
+	(is-a %3AFUNCTION %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Viaje
+	(is-a USER)
+	(role concrete)
+	(single-slot num_viajeros
+;+		(comment "El número de viajeros que forma el grupo")
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot destino_viaje
+;+		(comment "Ciudad de destino.")
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precio
+;+		(comment "El precio total de ese viaje")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 500.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot recomendado_a
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot medio_transporte_viaje_ida
+;+		(comment "Medio de transporte.")
+		(type INSTANCE)
+;+		(allowed-classes Transporte)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_viaje
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot alojamiento_viaje
+		(type INSTANCE)
+;+		(allowed-classes Alojamiento)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duracion_viaje
+;+		(comment "La duración del viaje en días. No se podrán contratar viajes con una duración superior a 30 días")
+		(type INTEGER)
+		(range 1 30)
+		(default 2)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot origen_viaje
+;+		(comment "Ciudad de origen.")
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot medio_transporte_viaje_vuelta
+		(type INSTANCE)
+;+		(allowed-classes Transporte)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Alojamiento
+	(is-a USER)
+	(role concrete)
+	(single-slot precio_alojamiento_dia_persona
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot localizacion_alojamiento
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre_alojamiento
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot viaje_en_que_se_oferta
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+		(create-accessor read-write))
+	(single-slot id_alojamiento
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot propiedad_de
+		(type INSTANCE)
+;+		(allowed-classes Cadena)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot regimen_alojamiento
+;+		(comment "El regimen de comidas.")
+		(type SYMBOL)
+		(allowed-values desayuno media_pension pension_completa todo_incluido)
+		(default media_pension pension_completa todo_incluido desayuno)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot tipo_alojamiento
+		(type SYMBOL)
+		(allowed-values hotel albergue barco pensi%C3%B3n parador)
+		(default hotel)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Transporte
+	(is-a USER)
+	(role abstract)
+	(single-slot origen_transporte
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot duracion_translado
+;+		(comment "En horas")
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hora_salida
+		(type INTEGER)
+		(range 0 2359)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre_transporte
+;+		(comment "El nombre del transporte.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot id_transporte
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot clase_transporte
+		(type SYMBOL)
+		(allowed-values turista bussiness primera)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precio_transporte_persona
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 100.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot destino_transporte
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass TransporteVIP
+	(is-a Transporte)
+	(role concrete)
+	(single-slot clase_transporte
+		(type SYMBOL)
+		(allowed-values bussiness primera)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass TransporteTurista
+	(is-a Transporte)
+	(role concrete)
+	(single-slot clase_transporte
+		(type SYMBOL)
+		(allowed-values turista)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Region
+	(is-a USER)
+	(role concrete)
+	(single-slot pais_region
+;+		(comment "País al que pertenece la región.")
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot idioma_region
+;+		(comment "El idioma oficial hablado en la región (por ejemplo, en Cataluña catalán y español)")
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot nombre_region
+;+		(comment "El nombre de la región, comunidad autónoma o equivalente división de un estado")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Pais
+	(is-a USER)
+	(role concrete)
+	(single-slot num_habitantes
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre_pais
+;+		(comment "El nombre del país")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Destino
+	(is-a USER)
+	(role concrete)
+	(single-slot nombre_destino
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot region_destino
+;+		(comment "Región a la que pertenece")
+		(type INSTANCE)
+;+		(allowed-classes Region)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot clima
+		(type SYMBOL)
+		(allowed-values calido frio)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot tipo_destino
+		(type SYMBOL)
+		(allowed-values playa relax cultura compras deporte aventura experienciaGastronomica altaCocina)
+		(default compras)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot viajes
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+		(create-accessor read-write)))
+
+(defclass Cadena
+	(is-a USER)
+	(role concrete)
+	(single-slot numero_empleados
+		(type INTEGER)
+		(range 0 %3FVARIABLE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot nombre_empresa
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot tiene
+;+		(comment "Alojamientos de la cadena o empresa.")
+		(type INSTANCE)
+;+		(allowed-classes Alojamiento)
+		(create-accessor read-write)))
+
+(defclass Usuario
+	(is-a USER)
+	(role concrete)
+	(single-slot sexo
+		(type SYMBOL)
+		(allowed-values hombre mujer)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nacionalidad
+;+		(comment "País de origen")
+		(type INSTANCE)
+;+		(allowed-classes Pais)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot num_pasajeros
+		(type INTEGER)
+		(range 1 8)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot viajes_recomendados
+		(type INSTANCE)
+;+		(allowed-classes Viaje)
+		(create-accessor read-write))
+	(single-slot edad
+		(type INTEGER)
+		(range 18 %3FVARIABLE)
+		(default 25)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot nombre_usuario
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ViajeDeseado
+	(is-a USER)
+	(role concrete)
+	(multislot prefiere
+		(type SYMBOL)
+		(allowed-values urbano descanso culinario deportivo)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot usuario
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot regimen_comida_deseado
+		(type SYMBOL)
+		(allowed-values media_pension desayuno pension_completa todo_incluido)
+		(default desayuno)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot origen
+		(type INSTANCE)
+;+		(allowed-classes Destino)
+		(default [pr9_Class6])
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot duracion
+;+		(comment "En días")
+		(type INTEGER)
+		(range 1 %3FVARIABLE)
+		(default 3)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot presupuesto
+		(type STRING)
+		(default "1000000")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot clima
+		(type SYMBOL)
+		(allowed-values calido frio)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
