@@ -1,6 +1,6 @@
 # AI
 
-Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing.
+Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing. This project was done during a university course (Artificial intelligence) and finished in June 2015.
 
 
 ## Natural Language Processing - Prolog
@@ -24,3 +24,14 @@ The database is implemented using the deffacts constructor and the recommendatio
 Integration of the previous ontology with the rule-based system in Jess to provide a more complex recommender system.
 
 **TravelRecommendationReport2.pdf** is a report of the project in Spanish.
+
+
+## Authors
+
+This project was developed by Ana María Martínez Gómez and Víctor Adolfo Gallego Alcalá.
+
+
+## Licence
+
+Code published under MIT License (see [LICENSE](LICENSE)).
+
