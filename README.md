@@ -3,6 +3,13 @@
 Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing.
 
 
+## Natural Language Processing - Prolog
+
+Natural Language Processing in Prolog. The project consists in a personal agenda with a natural language interface.
+
+**DiaryReport.pdf** is a report of the project in Spanish.
+
+
 ## Travel recommender
 
 This rule-based system suggests the most suitable voyage given the characteristics of the user and the destinations. 
