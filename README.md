@@ -1,6 +1,6 @@
 # AI
 
-Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing. This project was done during a university course (Artificial intelligence) and finished in June 2015.
+Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing. This project was done during a university course (Artificial intelligence) and finished in May 2015.
 
 
 ## Natural Language Processing - Prolog
