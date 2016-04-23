@@ -5,7 +5,7 @@ Several projects for the Artificial Intelligence course, with topics such as Rec
 
 ## Natural Language Processing - Prolog
 
-Natural Language Processing in Prolog. The project consists in a personal agenda with a natural language interface.
+Natural Language Processing in Prolog. The project consists in a personal agenda with a natural language interface. If you'd like to use it, you may use [swi-prolog](http://www.swi-prolog.org/) for example.
 
 **DiaryReport.pdf** is a report of the project in Spanish.
 
@@ -17,6 +17,10 @@ This rule-based system suggests the most suitable voyage given the characteristi
 The database is implemented using the deffacts constructor and the recommendations are possible with the usage of Jess rules. In order to execute the system you can use [this plugin for Eclipse](http://www.jessrules.com/doc/70/eclipse.html).
 
 **TravelRecommendationReport.pdf** is a report of the project in Spanish.
+
+## Ontology - Protégé
+
+We propose an ontology about the domain of touristic journeys. Several instances are included so you can make queries. In order to play with the ontology you need [Protégé](http://protege.stanford.edu/).
 
 
 ## Travel recommender - Protégé-Jess
