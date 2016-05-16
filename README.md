@@ -1,11 +1,11 @@
 # AI
 
-Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing. This project was done during a university course (Artificial intelligence) and finished in May 2015.
+Several projects for the Artificial Intelligence course, with topics such as Recommender and Rule-based Systems, Ontologies and Natural Language Processing. This project was done during a university course (Artificial intelligence) and finished in May 2015. Projects, comments and reports are in Spanish.
 
 
 ## Natural Language Processing - Prolog
 
-Natural Language Processing in Prolog. The project consists in a personal agenda with a natural language interface. If you'd like to use it, you may use [swi-prolog](http://www.swi-prolog.org/) for example.
+Natural Language Processing in Prolog. The project consists in a personal agenda with a natural language interface in Spanish. If you'd like to use it, you may use [swi-prolog](http://www.swi-prolog.org) for example.
 
 **DiaryReport.pdf** is a report of the project in Spanish.
 
